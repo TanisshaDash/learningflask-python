@@ -15,7 +15,7 @@ def student():
     return 'student'  
   
 @app.route('/user/<name>')  
-def user(admin):  
+def user(student):  
     if name == 'admin':  
         return redirect(url_for('admin'))  
     if name == 'librarion':  

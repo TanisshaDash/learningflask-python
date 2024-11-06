@@ -1,26 +1,9 @@
-from flask import *  
-   
+from flask import Flask  
 app = Flask(__name__)  
+ 
+@app.route('/')  
+def home():  
+    return "hello, welcome to our website";  
   
-@app.route('/admin')  
-def admin():  
-    return 'admin'  
-  
-@app.route('/librarion')  
-def librarion():  
-    return 'librarion'  
-  
-@app.route('/student')  
-def student():  
-    return 'student'  
-  
-@app.route('/user/<name>')  
-def user(admin):  
-    if name == 'admin':  
-        return redirect(url_for('admin'))  
-    if name == 'librarion':  
-        return redirect(url_for('librarion'))  
-    if name == 'student':  
-        return redirect(url_for('student'))  
-if __name__ =='__main__':  
+if __name__ =="__main__":  
     app.run(debug = True)  
