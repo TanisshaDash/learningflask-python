@@ -1,10 +1,7 @@
-from flask import Flask  
+from flask import *  
 app = Flask(__name__)  
-  
-def about():  
-    return "Abt Web";  
-  
-app.add_url_rule("/about","about",about)  
-  
-if __name__ =="__main__":  
-    app.run(debug = True)  
+@app.route('/')  
+def message():  
+      return "<html><body><h1>Hi, welcome to the website</h1></body></html>"  
+if __name__ == '__main__':  
+   app.run(debug = True)  
