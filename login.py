@@ -16,7 +16,7 @@ def success():
         email = request.form['email']  
         password = request.form['pass']  
       
-    if password=="jtp":  
+    if password=="whoosh":  
         resp = make_response(render_template('success.html'))  
         resp.set_cookie('email',email)  
         return resp  
