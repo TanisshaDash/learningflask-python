@@ -1,6 +1,6 @@
 from flask import *  
 app = Flask(__name__)  
-app.secret_key = "tanissha"  
+app.secret_key = "tantan"  
  
 @app.route('/')  
 def home():  
