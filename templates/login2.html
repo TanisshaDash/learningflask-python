@@ -3,11 +3,7 @@
     <title>login</title>  
 </head>  
 <body>  
-    {% if error %}  
-        <p><strong>Error</strong>: {{error}}</p>  
-    {% endif %}  
-  
-    <form method = "post" action = "/login">  
+    <form method = "post" action = "http://localhost:5000/validate">  
         <table>  
             <tr><td>Email</td><td><input type = 'email' name = 'email'></td></tr>  
             <tr><td>Password</td><td><input type = 'password' name = 'pass'></td></tr>  
