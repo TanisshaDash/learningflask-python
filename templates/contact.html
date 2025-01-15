@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label }} {{ form.name }}</p>
+        <p>{{ form.Gender.label }} {{ form.Gender }}</p>
+        <p>{{ form.Address.label }} {{ form.Address }}</p>
+        <p>{{ form.email.label }} {{ form.email }}</p>
+        <p>{{ form.Age.label }} {{ form.Age }}</p>
+        <p>{{ form.language.label }} {{ form.language }}</p>
+        <p>{{ form.submit }}</p>
+    </form>
+</body>
+</html>
