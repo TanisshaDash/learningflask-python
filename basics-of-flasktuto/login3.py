@@ -1,10 +1,8 @@
 from flask import *  
-app = Flask(__name__)  
- 
+app = Flask(__name__)   
 @app.route('/')  
 def home ():  
-    return render_template("home.html")  
- 
+    return render_template("home.html")   
 @app.route('/login')  
 def login():  
     return render_template("login.html");  
@@ -18,7 +16,6 @@ def validate():
  
 @app.route('/success')  
 def success():  
-    return "logged in successfully"  
-  
+    return "logged in successfully"   
 if __name__ == '__main__':  
     app.run(debug = True)  
