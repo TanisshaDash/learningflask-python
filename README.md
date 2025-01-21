@@ -1,1 +1,1 @@
-Learning Tutorial Of Flask with SQL 
+Learning Tutorial Of Flask  with Python & SQL 
